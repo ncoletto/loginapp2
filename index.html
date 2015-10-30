@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validacion de usuarios</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+</head>
+ 
+<body>
+    
+    <!------------    LOGIN    !------------>
+	<div data-role="page" id="inicio">
+	    
+            <div id="fondo-login">
+
+            <!--- HEADER !-->
+            <div data-role="header" class="none">
+            <img id="logo" src="img/logo.png">
+            </div>
+
+
+            <!--- CONTENIDO !-->
+            <div data-role="content">	
+            <form id="formulario" >
+            <input type="text" id="nombredeusuario" name="nombredeusuario">
+            <input type="password" id="clave" name="clave">
+            <input type="submit" value="Login">
+            </form>	
+            </div>
+            </div>
+        
+	</div>
+
+<!-- segunda pagina -->
+
+
+<div data-role="page" id="tiempo" data-url="tiempo">
+    <div data-role="header" data-theme="a">
+        <h1>Datos del Tiempo</h1>
+        <a href="#left-panel" data-icon="carat-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open left panel</a>
+        <a href="#right-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content">
+
+            <div data-role="header" class="none">
+           		<a href="#tiempo"><img id="logo" src="img/tiempo.jpg"></a>
+            </div>
+
+
+     </div><!-- /content -->
+    <div data-role="panel" id="left-panel" data-theme="a">
+        <p>Menú</p>
+
+            <ul data-role="listview">
+                <li><a href="#tiempo">Tiempo</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#bluetooth">Bluetooth</a></li>
+                <li><a href="#inicio">Salir</a></li>
+            </ul>
+  
+
+    </div><!-- /panel -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+        <p>CONFIGURACIÓN</p>
+            <form>
+                <label for="flip-1">Música</label>
+                <select id="flip-1" name="flip-1" data-role="slider">
+                    <option value="off">NO</option>
+                    <option value="on">SI</option>
+                </select>
+            </form>
+            <form>
+                <label for="flip-1">Llamadas</label>
+                <select id="flip-1" name="flip-1" data-role="slider">
+                    <option value="off">NO</option>
+                    <option value="on">SI</option>
+                </select>
+            </form>
+            <form>
+                <label for="flip-1">Alerta Automática</label>
+                <select id="flip-1" name="flip-1" data-role="slider">
+                    <option value="off">NO</option>
+                    <option value="on">SI</option>
+                </select>
+            </form>
+            
+            <div class="ui-field-contain">
+                <label for="textinput-fc"></label>
+                <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+            </div>
+
+    </div><!-- /panel -->
+</div>
+
+
+
+
+    <!------------    FAVORITOS    !------------>
+	<div data-role="page" id="favorito" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div data-role="header" class="none topbar">
+            <h1 id="titulo">Favoritos</h1>
+            </div>
+		 
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav">
+            <div class="btn-menu-nav">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-popular-o"></div></a>
+            </div>
+            <div class="btn-menu-nav">
+            <a href="#favorito" data-transition="slideup"><div class="img-btn btn-favorite-a"></div></a>
+            </div>
+            <a href="#notificacion" data-transition="slideup"><div class="btn-menu-nav">
+            <div class="img-btn btn-notification-o"></div></a>
+            </div>
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    <ul id="articulos-favoritos"></ul>
+		    </div>
+ 
+	</div>
+    
+    
+    
+    <!------------    NOTIFICACIONES    !------------>
+	<div data-role="page" id="notificacion" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div data-role="header" class="none topbar">
+            <h1 id="titulo">Notificaciones</h1>
+            </div>
+		 
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav">
+            <div class="btn-menu-nav">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-popular-o"></div></a>
+            </div>
+            <div class="btn-menu-nav">
+            <a href="#favorito" data-transition="slideup"><div class="img-btn btn-favorite-o"></div></a>
+            </div>
+            <a href="#notificacion" data-transition="slideup"><div class="btn-menu-nav">
+            <div class="img-btn btn-notification-a"></div></a>
+            </div>
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    
+            <div id="opciones-notificaciones">  
+                    <div class="option-notificacion" id="accion">
+                    <div class="img-icon"><img src="img/notificaciones/accion.png" ></div>
+                    <h1>Acción</h1>
+                    </div>
+
+                    <div class="option-notificacion" id="estrategia">
+                    <div class="img-icon"><img src="img/notificaciones/estrategia.png"></div>
+                    <h1>Estrategia</h1>
+                    </div>       
+
+                    <div class="option-notificacion" id="aventura">
+                    <div class="img-icon"><img src="img/notificaciones/aventura.png" ></div>
+                    <h1>Aventura</h1>
+                    </div>                 
+
+                    <div class="option-notificacion" id="deporte">
+                    <div class="img-icon"><img src="img/notificaciones/deporte.png" ></div>
+                    <h1>Deporte</h1>
+                    </div>      
+
+                    <div class="option-notificacion" id="rpg">
+                    <div class="img-icon"><img src="img/notificaciones/rpg.png" ></div>
+                    <h1>RPG</h1>
+                    </div>    
+            </div> 
+		    </div>
+ 
+	</div>    
+    
+
+<script>
+
+    
+	$('#formulario').submit(function() {
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombredeusuario").val()
+	var datosPassword = $("#clave").val()
+
+
+	archivoValidacion = "http://localhost/loginapp2/validacionReal.php?jsoncallback=?" 
+	 
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword}) 
+	.done(function(respuestaServer) {
+
+
+		if(respuestaServer.validacion == "ok"){ 
+
+			$.mobile.changePage("#tiempo"); // Redirige a esa page automaticamente va una vez
+
+			$("#tiempo").on("pageshow", function(){ //al mostrarse esa pagina pasa algo.
+
+				//esta linea estaba comentada
+				$("#titulo").append("Bienvenido, "+ respuestaServer[0].idUsuario);
+                var elementos = Object.keys(respuestaServer).length;
+
+			});
+
+            
+            
+	}else{
+
+	    alert("Datos inválidos");
+	}
+	
+
+	})
+
+
+	return false;
+
+
+	})
+
+
+</script>
+
+    
+   
+    
+    
+
+
+<script type="text/javascript" src="getProjects.js"></script> 
+<script type="text/javascript" src="cordova.js"></script> 
+
+</body>
+</html>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
