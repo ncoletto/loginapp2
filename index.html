@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
-<title>Validacion de usuarios online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hermes Inteligente App</title>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<link rel="stylesheet" href="themes/hermes.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+	
+    document.addEventListener("deviceready", arrancar, false);
+
+    // device APIs are available
+    //
+
+		function onSuccess(acceleration) {
+			
+			document.getElementById("incidente").innerHTML = acceleration.y;
+			
+			if(acceleration.y > 10) {
+				
+			//alert('Incidente detectado, enviando alerta sms...')
+			window.plugins.socialsharing.shareViaSMS('Alerta SMS', '1161792834', function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+
+		}
+		}
+		
+		function onError() {
+			alert('onError!');
+		};
+		
+		function arrancar() {
+		
+		var options = { frequency: 1000 };  // Update every 3 seconds
+		
+		var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
+		}
+
+    </script>
+
 
 </head>
  
@@ -15,7 +58,7 @@
 <div data-role="page" id="inicio">
  
 <div data-role="header">
-<h1>Autenticacion de Usuario</h1>
+<h1 id="incidente">HermesApp</h1>
 </div>
 <div data-role="content">	
 <form id="formulario" >
@@ -57,7 +100,7 @@ if(respuestaServer.validacion == "ok"){
 $.mobile.changePage("#home")
 }else{
 /// ejecutar una conducta cuando la validacion falla
-    alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+    alert(respuestaServer.mensaje + "\n" + respuestaServer.hora + "\n" +respuestaServer.generador)
 }
 })
 return false;
