@@ -13,6 +13,11 @@
 <link rel="stylesheet" href="themes/hermes.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+
+
 
     <script type="text/javascript" charset="utf-8">
 
@@ -55,34 +60,205 @@
  
 <body>
  
-<div data-role="page" id="inicio">
+<!-- primera pagina -->
+    <!------------    LOGIN    !------------>
+	<div data-role="page" id="inicio">
+	    
+            <div id="fondo-login">
+
+            <!--- HEADER !-->
+				<div data-role="header" class="none">
+				<img id="logo" src="img/logo.png">
+				</div>
+
+
+            <!--- CONTENIDO !-->
+				<div data-role="content">	
+				<form id="formulario" >
+				<input type="text" id="nombredeusuario" name="nombredeusuario">
+				<input type="password" id="clave" name="clave">
+				<input type="submit" value="Login" id="botonLogin">
+				</form>	
+				</div>
+            </div>
+	</div><!-- /pagina -->
  
-<div data-role="header">
-<h1 id="incidente">HermesApp</h1>
-</div>
-<div data-role="content">	
-<form id="formulario" >
-<label> Usuario </label>
-<input type="text" id="nombredeusuario" name="nombredeusuario">
-<label> Password </label>
-<input type="password" id="clave" name="clave" >
  
-<input type="submit" value="Login" id="botonLogin">
-</form>	
-</div>
-</div>
-<div data-role="page" id="home">
  
-<div data-role="header">
-<h1>Bienvenido</h1>
-</div>
- 
-<div data-role="content">	
-<h2> Bienvenido a la aplicacion </h2>
-<h3> Su usuario y password son válidos</h3>
-</div>
- 
-</div>
+ <!-- pagina -->
+	<div data-role="page" id="tiempo" data-theme="a" data-url="tiempo">
+		<div data-role="header" data-theme="a">
+			<h1>TIEMPO</h1>
+			<a href="#left-panel" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<a href="#right-panel" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
+		</div><!-- /header -->
+		<div data-role="content">
+            <div data-role="content" class="none">
+           		<img id="tiempoimg" src="img/tiempo.jpg">
+            </div>
+		</div><!-- /content -->
+			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			        <p>Menú</p>
+
+						<ul data-role="listview">
+						    <li><a href="#tiempo">Tiempo</a></li>
+						    <li><a href="#mapa">Mapa</a></li>
+						    <li><a href="#bluetooth">Bluetooth</a></li>
+						    <li><a href="#inicio">Salir</a></li>
+						</ul>
+			</div><!-- /panel -->
+		<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+			        <p id="configuracion">CONFIGURACIÓN </p>
+						<form>
+						    <label for="flip-1">Música</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Llamadas</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Alerta Automática</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						
+						<div class="ui-field-contain">
+						    <label for="textinput-fc"></label>
+						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+							<button onclick="window.plugins.socialsharing.shareViaTwitter('#incidente')">Twitter</button>
+
+						</div>
+		</div><!-- /panel -->
+		
+		<div data-role="footer" data-position="fixed">
+			<p id="incidente"></p>
+		</div><!-- /footer -->
+	</div><!-- /pagina -->
+
+<!-- pagina -->
+	<div data-role="page" id="mapa" data-theme="a" data-url="mapa">
+		<div data-role="header" data-theme="a">
+			<h1>GPS</h1>
+			<a href="#left-panel" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<a href="#right-panel" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
+		</div><!-- /header -->
+		<div data-role="content">
+            <div data-role="content" class="none">
+           		<img id="tiempoimg" src="img/mapa.jpg">
+            </div>
+		</div><!-- /content -->
+			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			        <p>Menú</p>
+
+						<ul data-role="listview">
+						    <li><a href="#tiempo">Tiempo</a></li>
+						    <li><a href="#mapa">Mapa</a></li>
+						    <li><a href="#bluetooth">Bluetooth</a></li>
+						    <li><a href="#inicio">Salir</a></li>
+						</ul>
+			</div><!-- /panel -->
+		<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+			        <p id="configuracion">CONFIGURACIÓN </p>
+						<form>
+						    <label for="flip-1">Música</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Llamadas</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Alerta Automática</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						
+						<div class="ui-field-contain">
+						    <label for="textinput-fc"></label>
+						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+						</div>
+		</div><!-- /panel -->
+		
+		<div data-role="footer" data-position="fixed">
+			<p id="incidente"></p>
+		</div><!-- /footer -->
+	</div><!-- /pagina -->
+
+	
+	<!-- pagina -->
+	<div data-role="page" id="bluetooth" data-theme="a" data-url="bluetooth">
+		<div data-role="header" data-theme="a">
+			<h1>BLUETOOTH</h1>
+			<a href="#left-panel" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<a href="#right-panel" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
+		</div><!-- /header -->
+		<div data-role="content">
+            <div data-role="content" class="none">
+           		<img id="tiempoimg" src="img/bluetooth.jpg">
+            </div>
+		</div><!-- /content -->
+			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			        <p>Menú</p>
+
+						<ul data-role="listview">
+						    <li><a href="#tiempo">Tiempo</a></li>
+						    <li><a href="#mapa">Mapa</a></li>
+						    <li><a href="#bluetooth">Bluetooth</a></li>
+						    <li><a href="#inicio">Salir</a></li>
+						</ul>
+			</div><!-- /panel -->
+		<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+			        <p id="configuracion">CONFIGURACIÓN </p>
+						<form>
+						    <label for="flip-1">Música</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Llamadas</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						<form>
+						    <label for="flip-1">Alerta Automática</label>
+						    <select id="flip-1" name="flip-1" data-role="slider">
+						        <option value="off">NO</option>
+						        <option value="on">SI</option>
+						    </select>
+						</form>
+						
+						<div class="ui-field-contain">
+						    <label for="textinput-fc"></label>
+						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+						</div>
+		</div><!-- /panel -->
+		
+		<div data-role="footer" data-position="fixed">
+			<p id="incidente"></p>
+		</div><!-- /footer -->
+	</div><!-- /pagina -->
+
  
 <script>
  
@@ -96,8 +272,8 @@ $.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword})
 .done(function(respuestaServer) {
 
 if(respuestaServer.validacion == "ok"){
-/// si la validacion es correcta, muestra la pantalla "home"
-$.mobile.changePage("#home")
+/// si la validacion es correcta, muestra la pantalla "tiempo"
+$.mobile.changePage("#tiempo")
 }else{
 /// ejecutar una conducta cuando la validacion falla
     alert(respuestaServer.mensaje + "\n" + respuestaServer.hora + "\n" +respuestaServer.generador)
