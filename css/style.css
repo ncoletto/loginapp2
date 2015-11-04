@@ -27,6 +27,13 @@ text-shadow:none
     margin-top: 80px;
 }
 
+#tiempoimg{
+    width:100%;
+    height:auto;
+    
+}
+
+
 #fondo-login{
     background-image: url(../img/bg.jpg);
     height: 100vh;
@@ -88,8 +95,12 @@ text-shadow:none
 }
 
 
-/******------------ LOGIN ------------******/
-
+/******------------ GENERALES ------------******/
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+	
+	
+	background-color:#000000;
+}
 
 
 /******------------ GENERAL SECCIONES ------------******/
@@ -474,4 +485,3 @@ text-shadow:none
 
 }
 
-/***************** NOTIFICACION *****************/

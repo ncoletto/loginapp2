@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.coletto.loginapp2"
+        id        = "com.coletto.loginApp2"
         version   = "1.0.0">
 
-    <name>loginapp2</name>
+    <name>LoginApp2</name>
 
     <description>
-		loginapp2
+        se loguea a la base online
     </description>
 
     <author href="http://www.nicolascoletto.com" email="ncoletto@gmail.com">
@@ -44,6 +44,8 @@
 
     <!-- Core plugins -->
 	<gap:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
+
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 
     <!-- Define app icon for each platform. This is a relative path to config.xml.
         For e.g. if you place an icon.png inside res folder, you should modify the
