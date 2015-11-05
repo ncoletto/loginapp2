@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Hermes Inteligente App</title>
+
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>    
 
 <link rel="stylesheet" href="themes/hermes.min.css" />
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 <link rel="stylesheet" href="js/jquery.mobile.structure-1.4.5.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<script src="js/scripts.js"></script>
+
 <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
-
-
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>    
-
 
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -59,12 +59,9 @@
 
     </script>
 
-
-
 </head>
- 
 <body>
- 
+
 <!-- primera pagina -->
     <!------------    LOGIN    !------------>
 	<div data-role="page" id="inicio">
@@ -88,8 +85,7 @@
             </div>
 	</div><!-- /pagina -->
  
- 
- 
+
  <!-- pagina -->
 	<div data-role="page" id="tiempo" data-theme="a" data-url="tiempo">
 		<div data-role="header" data-theme="a">
@@ -139,7 +135,6 @@
 						<div class="ui-field-contain">
 						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
 							<button onclick="window.plugins.socialsharing.shareViaTwitter('#incidente')">Twitter</button>
-
 						</div>
 		</div><!-- /panel -->
 		
@@ -148,19 +143,19 @@
 		</div><!-- /footer -->
 	</div><!-- /pagina -->
 
-<!-- pagina -->
+ <!-- pagina -->
 	<div data-role="page" id="mapa" data-theme="a" data-url="mapa">
 		<div data-role="header" data-theme="a">
 			<h1>GPS</h1>
-			<a href="#left-panel" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
-			<a href="#right-panel" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
+			<a href="#left-panel1" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<a href="#right-panel1" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
 		</div><!-- /header -->
 		<div data-role="content">
             <div data-role="content" class="none">
            		<img id="tiempoimg" src="img/mapa.jpg">
             </div>
 		</div><!-- /content -->
-			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			<div data-role="panel" id="left-panel1" data-display="push" data-theme="a">
 			        <p>Menú</p>
 
 						<ul data-role="listview">
@@ -170,7 +165,7 @@
 						    <li><a href="#inicio">Salir</a></li>
 						</ul>
 			</div><!-- /panel -->
-		<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+		<div data-role="panel" id="right-panel1" data-display="push" data-position="right" data-theme="a">
 			        <p id="configuracion">CONFIGURACIÓN </p>
 						<form>
 						    <label for="flip-1">Música</label>
@@ -196,6 +191,7 @@
 						
 						<div class="ui-field-contain">
 						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+							<button onclick="window.plugins.socialsharing.shareViaTwitter('#incidente')">Twitter</button>
 						</div>
 		</div><!-- /panel -->
 		
@@ -203,21 +199,19 @@
 			<p id="incidente"></p>
 		</div><!-- /footer -->
 	</div><!-- /pagina -->
-
-	
-	<!-- pagina -->
+ <!-- pagina -->
 	<div data-role="page" id="bluetooth" data-theme="a" data-url="bluetooth">
 		<div data-role="header" data-theme="a">
 			<h1>BLUETOOTH</h1>
-			<a href="#left-panel" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
-			<a href="#right-panel" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
+			<a href="#left-panel2" data-theme="a" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<a href="#right-panel2" data-theme="a" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open right panel</a>
 		</div><!-- /header -->
 		<div data-role="content">
             <div data-role="content" class="none">
            		<img id="tiempoimg" src="img/bluetooth.jpg">
             </div>
 		</div><!-- /content -->
-			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			<div data-role="panel" id="left-panel2" data-display="push" data-theme="a">
 			        <p>Menú</p>
 
 						<ul data-role="listview">
@@ -227,7 +221,7 @@
 						    <li><a href="#inicio">Salir</a></li>
 						</ul>
 			</div><!-- /panel -->
-		<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+		<div data-role="panel" id="right-panel2" data-display="push" data-position="right" data-theme="a">
 			        <p id="configuracion">CONFIGURACIÓN </p>
 						<form>
 						    <label for="flip-1">Música</label>
@@ -253,6 +247,7 @@
 						
 						<div class="ui-field-contain">
 						    <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Nro. de teléfono S.O.S." value="">
+							<button onclick="window.plugins.socialsharing.shareViaTwitter('#incidente')">Twitter</button>
 						</div>
 		</div><!-- /panel -->
 		
@@ -261,7 +256,11 @@
 		</div><!-- /footer -->
 	</div><!-- /pagina -->
 
- 
+
+
+
+
+
 <script>
  
 $('#formulario').submit(function() {
@@ -292,6 +291,9 @@ $.mobile.changePage("#tiempo")
 return false;
 })
 </script>
- 
+
+
+
+
 </body>
 </html>

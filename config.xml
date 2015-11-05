@@ -2,7 +2,7 @@
 <widget id="com.phonegap.loginApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>LoginApp2</name>
     <description>
-        loggin a base de datos online
+        login online acelerometro sms paneles swipe
     </description>
     <author email="ncoletto@gmail.com" href="http://www.nicolascoletto.com">
         Nicolas Coletto
