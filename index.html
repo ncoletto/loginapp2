@@ -98,7 +98,7 @@
            		<img id="tiempoimg" src="img/tiempo.jpg">
             </div>
 		</div><!-- /content -->
-			<div data-role="panel" id="left-panel" data-display="push" data-theme="a">
+			<div data-role="panel" id="left-panel" data-display="overlay" data-theme="a">
 			        <p>Menú</p>
 
 						<ul data-role="listview">
@@ -155,7 +155,7 @@
            		<img id="tiempoimg" src="img/mapa.jpg">
             </div>
 		</div><!-- /content -->
-			<div data-role="panel" id="left-panel1" data-display="push" data-theme="a">
+			<div data-role="panel" id="left-panel1" data-display="overlay" data-theme="a">
 			        <p>Menú</p>
 
 						<ul data-role="listview">
@@ -211,7 +211,7 @@
            		<img id="tiempoimg" src="img/bluetooth.jpg">
             </div>
 		</div><!-- /content -->
-			<div data-role="panel" id="left-panel2" data-display="push" data-theme="a">
+			<div data-role="panel" id="left-panel2" data-display="overlay" data-theme="a">
 			        <p>Menú</p>
 
 						<ul data-role="listview">
@@ -280,7 +280,9 @@ if(respuestaServer.validacion == "ok"){
 /// si la validacion es correcta, muestra la pantalla "tiempo"
 $.mobile.changePage("#tiempo")
 
-/// agrego el nombre de usuario en la configuracion
+/// agrego el nombre de usuario en la configuracion, primero limpio el dato
+				 $("#configuracion").clear;
+
 				$("#configuracion").append(nombre);
 
 }else{
